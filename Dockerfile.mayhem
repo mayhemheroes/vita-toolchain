@@ -1,0 +1,18 @@
+FROM --platform=linux/amd64 ubuntu:22.04
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential cmake pkg-config libzip-dev libyaml-dev wget
+
+RUN wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libelf/0.8.13-5/libelf_0.8.13.orig.tar.gz -O lb.tar.gz
+RUN mkdir -p libelf
+RUN tar -xzf lb.tar.gz -C libelf --strip-components 1
+WORKDIR /libelf
+RUN ./configure
+RUN make -j8
+RUN make install
+
+
+COPY . /repo
+WORKDIR /repo/build
+RUN cmake ..
+RUN make -j8
