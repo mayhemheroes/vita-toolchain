@@ -1,8 +1,7 @@
 project: rnshah9/vita-toolchain
-target: vita-toolchain
+target: vita-libs-gen
 
 cmds:
   - cmd: /repo/build/src/vita-libs-gen @@ out
     filepath: /test.yaml
-image: ghcr.io/rnshah9/playground:vita-toolchain
 
