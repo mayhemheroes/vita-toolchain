@@ -2,6 +2,5 @@ project: vita-toolchain
 target: vita-libs-gen
 
 cmds:
-  - cmd: /repo/build/src/vita-libs-gen /test.yaml out
-    filepath: /test.yaml
+  - cmd: /install/bin/vita-libs-gen @@ out
 
