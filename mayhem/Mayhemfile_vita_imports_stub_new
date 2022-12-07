@@ -1,0 +1,7 @@
+project: vita-toolchain
+target: vita-imports-stub-new
+
+cmds:
+  - cmd: /fuzz_vita_imports_stub_new
+    libfuzzer: true
+

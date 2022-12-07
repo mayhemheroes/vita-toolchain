@@ -1,0 +1,6 @@
+project: vita-toolchain
+target: vita-libs-gen
+
+cmds:
+  - cmd: /install/bin/vita-libs-gen @@ out
+
