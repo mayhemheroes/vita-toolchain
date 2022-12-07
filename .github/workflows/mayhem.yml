@@ -59,7 +59,8 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-          - mayhem/Mayhemfile
+          - mayhem/Mayhemfile_vita_imports_stub_new
+          - mayhem/Mayhemfile_vita-libs-gen
 
     steps:
       - uses: actions/checkout@v3
